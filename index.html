@@ -1,0 +1,2638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mana Raithanna Foundation — Empowering Farmers, Nurturing Nature, Building Communities in Andhra Pradesh." />
+  <title>Mana Raithanna Foundation | Empowering Farmers in Andhra Pradesh</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Noto+Sans+Telugu:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS Animate On Scroll -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <style>
+    /* =========================================================
+       CSS CUSTOM PROPERTIES
+    ========================================================= */
+    :root {
+      --saffron:   #FF6B35;
+      --saffron-dark: #e85a22;
+      --green:     #2D5016;
+      --green-mid: #3d6b20;
+      --green-light: #4a7c24;
+      --brown:     #8B4513;
+      --golden:    #F4A261;
+      --cream:     #FFF8F0;
+      --cream-dark:#F5EAD8;
+      --white:     #FFFFFF;
+      --text-dark: #1a1a2e;
+      --text-mid:  #444444;
+      --text-light:#777777;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+      --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+      --font-head: 'Poppins', sans-serif;
+      --font-telugu: 'Noto Sans Telugu', sans-serif;
+    }
+
+    /* =========================================================
+       RESET & BASE
+    ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Skip link for keyboard accessibility */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      z-index: 9999;
+      padding: 8px 16px;
+      background: var(--saffron);
+      color: var(--white);
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 16px; }
+
+    /* Global focus ring */
+    :focus-visible {
+      outline: 3px solid var(--saffron);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; font-family: inherit; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(255, 107, 53, 0.12);
+      color: var(--saffron);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-saffron {
+      background: var(--saffron);
+      color: var(--white);
+      border-color: var(--saffron);
+      animation: pulse 2.5s infinite;
+    }
+    .btn-saffron:hover {
+      background: var(--saffron-dark);
+      border-color: var(--saffron-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255,107,53,0.4);
+      animation: none;
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.7);
+    }
+    .btn-outline-white:hover {
+      background: var(--white);
+      color: var(--text-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: var(--white);
+      border-color: var(--green);
+    }
+    .btn-green:hover {
+      background: var(--green-mid);
+      border-color: var(--green-mid);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(45,80,22,0.35);
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,107,53,0.4); }
+      50%       { box-shadow: 0 0 0 10px rgba(255,107,53,0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(8px); }
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    /* =========================================================
+       LOADING OVERLAY
+    ========================================================= */
+    #page-loader {
+      position: fixed;
+      inset: 0;
+      background: var(--green);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    #page-loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .loader-leaf {
+      font-size: 3rem;
+      color: var(--golden);
+      animation: pulse 1s infinite;
+      margin-bottom: 16px;
+    }
+    .loader-text {
+      font-family: var(--font-telugu);
+      color: var(--cream);
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .loader-bar {
+      width: 200px;
+      height: 3px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 100px;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+    .loader-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--golden);
+      border-radius: 100px;
+      animation: loadBar 1.8s ease forwards;
+    }
+    @keyframes loadBar {
+      to { width: 100%; }
+    }
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 16px 0;
+      transition: all var(--transition);
+    }
+    #navbar.scrolled {
+      background: var(--white);
+      padding: 10px 0;
+      box-shadow: var(--shadow-md);
+    }
+    #navbar .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--saffron), var(--golden));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--white);
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(255,107,53,0.35);
+    }
+    .nav-logo .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-name {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+      transition: color var(--transition);
+    }
+    #navbar.scrolled .logo-name { color: var(--green); }
+    .logo-tagline {
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.75);
+      font-weight: 400;
+      transition: color var(--transition);
+    }
+    #navbar.scrolled .logo-tagline { color: var(--text-light); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    #navbar.scrolled .nav-links a { color: var(--text-dark); }
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.15);
+      color: var(--white);
+    }
+    #navbar.scrolled .nav-links a:hover {
+      background: var(--cream);
+      color: var(--green);
+    }
+
+    .nav-donate {
+      background: var(--saffron);
+      color: var(--white) !important;
+      padding: 10px 20px !important;
+      border-radius: 100px !important;
+      font-weight: 700 !important;
+      box-shadow: 0 4px 12px rgba(255,107,53,0.35);
+    }
+    .nav-donate:hover {
+      background: var(--saffron-dark) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(255,107,53,0.45) !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 4px;
+      cursor: pointer;
+    }
+    .hamburger span {
+      width: 24px;
+      height: 2.5px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    #navbar.scrolled .hamburger span { background: var(--text-dark); }
+    .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0; right: 0;
+      background: var(--white);
+      box-shadow: var(--shadow-lg);
+      padding: 16px 24px 24px;
+      border-top: 3px solid var(--saffron);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      border-bottom: 1px solid var(--cream-dark);
+      transition: var(--transition);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--saffron); padding-left: 8px; }
+    .mobile-donate-btn {
+      display: block;
+      margin-top: 16px;
+      background: var(--saffron);
+      color: var(--white) !important;
+      text-align: center;
+      padding: 14px 0 !important;
+      border-radius: 100px;
+      font-weight: 700;
+      border-bottom: none !important;
+    }
+    .mobile-donate-btn:hover { background: var(--saffron-dark); padding-left: 0 !important; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      transform: scale(1.05);
+      transition: opacity 0.8s ease;
+    }
+    .hero-bg.loaded { opacity: 1; }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(0,0,0,0.75) 0%,
+        rgba(45,80,22,0.6) 50%,
+        rgba(0,0,0,0.8) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 120px 24px 200px;
+    }
+    .hero-telugu {
+      font-family: var(--font-telugu);
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      font-weight: 700;
+      color: var(--golden);
+      margin-bottom: 8px;
+      opacity: 0;
+      animation: fadeInUp 0.8s 0.3s forwards;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    .hero-title {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInUp 0.8s 0.5s forwards;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .hero-title span { color: var(--golden); }
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: rgba(255,255,255,0.88);
+      font-weight: 400;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeInUp 0.8s 0.7s forwards;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeInUp 0.8s 0.9s forwards;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeIn 1s 1.5s forwards;
+    }
+    .scroll-indicator .mouse {
+      width: 22px;
+      height: 36px;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 11px;
+      display: flex;
+      justify-content: center;
+      padding-top: 6px;
+    }
+    .scroll-indicator .wheel {
+      width: 3px;
+      height: 8px;
+      background: rgba(255,255,255,0.7);
+      border-radius: 2px;
+      animation: scrollBounce 1.5s infinite;
+    }
+
+    /* Hero stats strip */
+    .hero-stats {
+      position: absolute;
+      bottom: 0;
+      left: 0; right: 0;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .stat-card {
+      padding: 24px 20px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.12);
+      transition: var(--transition);
+    }
+    .stat-card:last-child { border-right: none; }
+    .stat-card:hover { background: rgba(255,255,255,0.1); }
+    .stat-card .stat-icon {
+      font-size: 1.6rem;
+      color: var(--golden);
+      margin-bottom: 8px;
+    }
+    .stat-card .stat-num {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-card .stat-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.75);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 768px) {
+      .hero-bg { background-attachment: scroll; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .stat-card:nth-child(2) { border-right: none; }
+      .stat-card:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.12); }
+      .scroll-indicator { bottom: 300px; }
+    }
+    @media (max-width: 480px) {
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .hero-content { padding-bottom: 280px; }
+    }
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+    #about {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-text .about-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      border-left: 4px solid var(--saffron);
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 24px;
+      font-size: 0.85rem;
+      color: var(--text-mid);
+    }
+    .about-meta i { color: var(--saffron); font-size: 1rem; }
+    .about-desc {
+      font-size: 1.02rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .value-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .pillar {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid var(--cream-dark);
+    }
+    .pillar:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--saffron);
+    }
+    .pillar .pillar-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin: 0 auto 10px;
+    }
+    .pillar:nth-child(1) .pillar-icon { background: rgba(255,107,53,0.12); color: var(--saffron); }
+    .pillar:nth-child(2) .pillar-icon { background: rgba(45,80,22,0.12); color: var(--green); }
+    .pillar:nth-child(3) .pillar-icon { background: rgba(139,69,19,0.12); color: var(--brown); }
+    .pillar h4 { font-size: 0.85rem; font-weight: 700; color: var(--text-dark); }
+
+    /* Accordion */
+    .accordion {
+      margin-top: 8px;
+      border: 1px solid var(--cream-dark);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--white);
+    }
+    .accordion-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background: none;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .accordion-header:hover { background: var(--cream); }
+    .accordion-header i { transition: transform 0.3s; color: var(--saffron); }
+    .accordion-header.open i { transform: rotate(180deg); }
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      padding: 0 20px;
+    }
+    .accordion-body.open {
+      max-height: 300px;
+      padding: 0 20px 20px;
+    }
+    .accordion-body p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    /* About Image */
+    .about-image-wrap {
+      position: relative;
+    }
+    .about-image-wrap img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+    .about-badge {
+      position: absolute;
+      bottom: -20px;
+      left: 20px;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 200px;
+    }
+    .about-badge .badge-icon {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--saffron), var(--golden));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .about-badge .badge-text strong { display: block; font-size: 1.2rem; font-weight: 800; color: var(--green); }
+    .about-badge .badge-text span { font-size: 0.75rem; color: var(--text-light); }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-image-wrap img { height: 360px; }
+      .value-pillars { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 576px) {
+      .value-pillars { grid-template-columns: 1fr; }
+    }
+
+    /* =========================================================
+       PROGRAMS
+    ========================================================= */
+    #programs {
+      padding: 100px 0;
+      background: var(--white);
+    }
+    .programs-header { text-align: center; margin-bottom: 64px; }
+    .programs-header .section-subtitle { margin: 0 auto; }
+
+    .programs-categories {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .cat-tab {
+      padding: 10px 22px;
+      border-radius: 100px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border: 2px solid var(--cream-dark);
+      background: var(--white);
+      color: var(--text-mid);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .cat-tab:hover, .cat-tab.active {
+      background: var(--green);
+      color: var(--white);
+      border-color: var(--green);
+      box-shadow: 0 4px 12px rgba(45,80,22,0.25);
+    }
+
+    .programs-section { margin-bottom: 64px; }
+    .programs-section-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .programs-section-label .label-icon {
+      width: 48px; height: 48px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+    }
+    .programs-section-label h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+    .programs-section-label span {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      display: block;
+      font-weight: 400;
+    }
+    .agri-label .label-icon { background: rgba(45,80,22,0.1); color: var(--green); }
+    .empwr-label .label-icon { background: rgba(255,107,53,0.1); color: var(--saffron); }
+    .social-label .label-icon { background: rgba(139,69,19,0.1); color: var(--brown); }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .program-card {
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .program-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--saffron), var(--golden));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition);
+    }
+    .program-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+    .program-card:hover::before { transform: scaleX(1); }
+    .card-icon {
+      width: 56px; height: 56px;
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .agri-card .card-icon { background: rgba(45,80,22,0.1); color: var(--green); }
+    .empwr-card .card-icon { background: rgba(255,107,53,0.1); color: var(--saffron); }
+    .social-card .card-icon { background: rgba(139,69,19,0.1); color: var(--brown); }
+    .program-card h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+    .program-card p {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    /* =========================================================
+       IMPACT NUMBERS
+    ========================================================= */
+    #impact {
+      padding: 96px 0;
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #impact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .impact-header { text-align: center; margin-bottom: 64px; }
+    .impact-header .section-tag { background: rgba(244,162,97,0.2); color: var(--golden); }
+    .impact-header .section-title { color: var(--white); }
+    .impact-header .section-subtitle { color: rgba(255,255,255,0.75); margin: 0 auto; }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+    }
+    .impact-item {
+      text-align: center;
+      padding: 32px 16px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(4px);
+      transition: var(--transition);
+    }
+    .impact-item:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    .impact-icon {
+      font-size: 2rem;
+      color: var(--golden);
+      margin-bottom: 12px;
+    }
+    .impact-num {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .impact-label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.72);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+
+    @media (max-width: 900px) { .impact-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 576px) { .impact-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* =========================================================
+       TEAM
+    ========================================================= */
+    #team {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+    .team-header { text-align: center; margin-bottom: 64px; }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .team-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid var(--cream-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .team-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--saffron), var(--golden));
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .team-card:hover::after { transform: scaleX(1); }
+    .avatar {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--white);
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, var(--green), var(--green-light));
+      box-shadow: 0 4px 16px rgba(45,80,22,0.3);
+      letter-spacing: 1px;
+    }
+    .role-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+    .badge-president { background: rgba(255,107,53,0.12); color: var(--saffron); }
+    .badge-vp        { background: rgba(45,80,22,0.12); color: var(--green); }
+    .badge-secretary { background: rgba(139,69,19,0.12); color: var(--brown); }
+    .badge-joint     { background: rgba(244,162,97,0.2); color: #b8720a; }
+    .badge-treasurer { background: rgba(13,110,253,0.1); color: #0d6efd; }
+    .badge-exec      { background: rgba(108,117,125,0.12); color: #495057; }
+    .team-name { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; }
+    .team-occupation { font-size: 0.82rem; color: var(--text-light); }
+
+    /* =========================================================
+       MEMBERSHIP
+    ========================================================= */
+    #membership {
+      padding: 100px 0;
+      background: var(--white);
+    }
+    .membership-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .membership-info .info-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 28px 0;
+    }
+    .info-block {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--cream);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+    }
+    .info-block .ib-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--saffron), var(--golden));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .info-block h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; color: var(--text-dark); }
+    .info-block p  { font-size: 0.85rem; color: var(--text-mid); line-height: 1.6; }
+    .integrity-note {
+      display: flex;
+      gap: 12px;
+      background: rgba(45,80,22,0.06);
+      border: 1px solid rgba(45,80,22,0.15);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      font-size: 0.85rem;
+      color: var(--green);
+    }
+    .integrity-note i { flex-shrink: 0; margin-top: 2px; }
+
+    /* Membership Form */
+    .membership-form-card {
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      box-shadow: var(--shadow-md);
+    }
+    .form-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .form-subtitle {
+      font-size: 0.875rem;
+      color: var(--text-light);
+      margin-bottom: 28px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--cream-dark);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-family: inherit;
+      color: var(--text-dark);
+      background: var(--white);
+      transition: var(--transition);
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--saffron);
+      box-shadow: 0 0 0 3px rgba(255,107,53,0.12);
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: #bbb; }
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--saffron), var(--golden));
+      cursor: pointer;
+      transition: var(--transition);
+      letter-spacing: 0.03em;
+    }
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255,107,53,0.4);
+    }
+
+    @media (max-width: 900px) {
+      .membership-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    /* Bank Details Card */
+    .bank-card {
+      margin-top: 48px;
+      background: linear-gradient(135deg, #1a3a0a 0%, var(--green) 100%);
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    .bank-card::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .bank-card-icon {
+      width: 72px; height: 72px;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      color: var(--golden);
+      flex-shrink: 0;
+    }
+    .bank-card-body { flex: 1; min-width: 220px; }
+    .bank-card-body h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--golden);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .bank-details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .bank-detail-row {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+    }
+    .bank-detail-row .bd-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 3px;
+    }
+    .bank-detail-row .bd-value {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.03em;
+    }
+    .bank-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .bank-cta .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      background: #25D366;
+      color: var(--white);
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .bank-cta .btn-whatsapp:hover {
+      background: #1ebe5b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+    }
+    .bank-cta small {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .bank-card { padding: 24px 20px; gap: 24px; }
+      .bank-cta { width: 100%; }
+      .bank-cta .btn-whatsapp { width: 100%; justify-content: center; }
+    }
+
+    /* =========================================================
+       GALLERY
+    ========================================================= */
+    #gallery {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+    .gallery-header { text-align: center; margin-bottom: 48px; }
+    .gallery-strip {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 8px 24px 24px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: var(--saffron) transparent;
+    }
+    .gallery-strip::-webkit-scrollbar { height: 4px; }
+    .gallery-strip::-webkit-scrollbar-track { background: var(--cream-dark); border-radius: 2px; }
+    .gallery-strip::-webkit-scrollbar-thumb { background: var(--saffron); border-radius: 2px; }
+    .gallery-item {
+      flex-shrink: 0;
+      width: 320px;
+      height: 220px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      scroll-snap-align: start;
+      position: relative;
+    }
+    .gallery-item {
+      background: linear-gradient(135deg, var(--green), var(--green-light));
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.75));
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 20px 14px 12px;
+      opacity: 1;
+      transition: var(--transition);
+    }
+
+    /* Lightbox */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: var(--radius-sm);
+    }
+    #lightbox-close {
+      position: absolute;
+      top: 20px; right: 24px;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      opacity: 0.8;
+      transition: var(--transition);
+    }
+    #lightbox-close:hover { opacity: 1; transform: scale(1.1); }
+
+    /* =========================================================
+       NEWS TICKER
+    ========================================================= */
+    #news-ticker {
+      background: var(--green);
+      padding: 14px 0;
+      overflow: hidden;
+    }
+    .ticker-inner {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .ticker-label {
+      background: var(--saffron);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 6px 16px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-right: 24px;
+    }
+    .ticker-track {
+      overflow: hidden;
+      flex: 1;
+    }
+    .ticker-content {
+      display: flex;
+      animation: ticker 28s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-content span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.88);
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding-right: 60px;
+    }
+    .ticker-content span i { color: var(--golden); font-size: 0.7rem; }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* =========================================================
+       CONTACT / FOOTER
+    ========================================================= */
+    #contact {
+      background: var(--green);
+      padding: 80px 0 0;
+      color: var(--white);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr 1.5fr;
+      gap: 48px;
+      padding-bottom: 48px;
+    }
+    .footer-brand .f-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .f-logo-icon {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--saffron), var(--golden));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      color: var(--white);
+    }
+    .f-logo-name { font-size: 1.1rem; font-weight: 800; color: var(--white); }
+    .f-logo-sub  { font-size: 0.65rem; color: rgba(255,255,255,0.65); }
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .social-row {
+      display: flex;
+      gap: 10px;
+    }
+    .social-btn {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.75);
+      transition: var(--transition);
+    }
+    .social-btn:hover {
+      background: var(--saffron);
+      border-color: var(--saffron);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .footer-links h4,
+    .footer-contact h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--golden);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .footer-links ul li {
+      margin-bottom: 10px;
+    }
+    .footer-links ul li a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.72);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-links ul li a::before {
+      content: '›';
+      color: var(--saffron);
+      font-weight: 700;
+    }
+    .footer-links ul li a:hover { color: var(--white); padding-left: 4px; }
+
+    .contact-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+    .contact-item i {
+      font-size: 1rem;
+      color: var(--golden);
+      margin-top: 2px;
+      flex-shrink: 0;
+      width: 20px;
+      text-align: center;
+    }
+    .contact-item p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+    }
+    .contact-item a { color: rgba(255,255,255,0.75); transition: color var(--transition); }
+    .contact-item a:hover { color: var(--white); }
+
+    .map-embed {
+      margin-top: 20px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      gap: 8px;
+    }
+    .map-embed i { font-size: 1.2rem; color: var(--golden); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+    }
+    .footer-bottom strong { color: rgba(255,255,255,0.75); }
+    .footer-reg {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      text-align: right;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 576px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-reg { text-align: center; }
+    }
+
+    /* =========================================================
+       BACK TO TOP
+    ========================================================= */
+    #back-top {
+      position: fixed;
+      bottom: 32px; right: 32px;
+      width: 44px; height: 44px;
+      background: var(--saffron);
+      color: var(--white);
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow-md);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: var(--transition);
+      z-index: 500;
+    }
+    #back-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #back-top:hover {
+      background: var(--saffron-dark);
+      transform: translateY(-2px);
+    }
+
+    /* =========================================================
+       UTILITY
+    ========================================================= */
+    .text-center { text-align: center; }
+    .mb-16 { margin-bottom: 16px; }
+    .mb-24 { margin-bottom: 24px; }
+    .mb-40 { margin-bottom: 40px; }
+    .section-divider {
+      width: 60px; height: 4px;
+      background: linear-gradient(90deg, var(--saffron), var(--golden));
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+    .section-divider.center { margin-left: auto; margin-right: auto; }
+
+    /* Programs section separator */
+    .programs-sep {
+      height: 1px;
+      background: var(--cream-dark);
+      margin: 48px 0;
+    }
+
+    /* Photo area label in about */
+    .about-photo-label {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: var(--saffron);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 100px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* Responsive helpers */
+    @media (max-width: 768px) {
+      #about { padding: 72px 0; }
+      #programs { padding: 72px 0; }
+      #impact { padding: 72px 0; }
+      #team { padding: 72px 0; }
+      #membership { padding: 72px 0; }
+      #gallery { padding: 72px 0; }
+      .membership-form-card { padding: 28px 20px; }
+    }
+
+    /* =========================================================
+       MOBILE (≤ 480px) — comprehensive small-screen fixes
+    ========================================================= */
+    @media (max-width: 480px) {
+      /* Tighter container padding */
+      .container { padding: 0 16px; }
+
+      /* Reduce all section vertical padding */
+      #about, #programs, #impact, #team,
+      #membership, #gallery { padding: 48px 0; }
+      #contact { padding: 48px 0 0; }
+
+      /* Hero — less bottom padding so stats fit without giant gap */
+      .hero-content { padding: 90px 16px 140px; }
+
+      /* Scroll indicator sits too close to stats — hide it on mobile */
+      .scroll-indicator { display: none; }
+
+      /* Stats strip — single column on very small phones */
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .stat-card { border-right: none !important; border-top: 1px solid rgba(255,255,255,0.12); }
+      .stat-card:nth-child(-n+2) { border-top: none; }
+      .stat-card .stat-num { font-size: 1.5rem; }
+
+      /* Hero CTA buttons — stack vertically */
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .hero-ctas .btn { width: 100%; max-width: 300px; justify-content: center; }
+
+      /* Section titles */
+      .section-title { font-size: clamp(1.5rem, 6vw, 2rem); }
+
+      /* About */
+      .about-grid { gap: 32px; }
+      .value-pillars { grid-template-columns: repeat(3, 1fr); }
+
+      /* Impact numbers — smaller so they don't overflow */
+      .impact-num { font-size: 2.2rem; }
+      .impact-grid { gap: 12px; }
+      .impact-card { padding: 24px 16px; }
+
+      /* Programs grid — force single column */
+      .programs-grid { grid-template-columns: 1fr; }
+      .programs-header, .team-header, .gallery-header { margin-bottom: 32px; }
+
+      /* Team grid — single column */
+      .team-grid { grid-template-columns: 1fr; }
+
+      /* Membership form */
+      .membership-form-card { padding: 24px 16px; }
+      .form-row { grid-template-columns: 1fr; }
+
+      /* Gallery items — narrower on small screens */
+      .gallery-item { width: 260px; height: 180px; }
+
+      /* Footer */
+      .footer-grid { gap: 32px; }
+      .footer-bottom { font-size: 0.75rem; }
+
+      /* Back to top — don't overlap content */
+      #back-top { bottom: 16px; right: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Skip to main content (accessibility) -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- =========================================================
+     LOADING OVERLAY
+========================================================= -->
+<div id="page-loader">
+  <div class="loader-leaf"><i class="fa-solid fa-leaf"></i></div>
+  <div class="loader-text">మన రైతన్న ఫౌండేషన్</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+<header id="navbar">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="images/logo.jpeg" alt="MRF Logo" style="width:44px;height:44px;border-radius:10px;object-fit:cover;flex-shrink:0;" />
+        <div class="logo-text">
+          <span class="logo-name">Mana Raithanna Foundation</span>
+          <span class="logo-tagline">Empowering Farmers Since 2001</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#membership" class="nav-donate"><i class="fa-solid fa-heart"></i> Donate Now</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#hero"       onclick="closeMobileMenu()">Home</a>
+      <a href="#about"      onclick="closeMobileMenu()">About</a>
+      <a href="#programs"   onclick="closeMobileMenu()">Programs</a>
+      <a href="#team"       onclick="closeMobileMenu()">Team</a>
+      <a href="#membership" onclick="closeMobileMenu()">Membership</a>
+      <a href="#contact"    onclick="closeMobileMenu()">Contact</a>
+      <a href="#membership" onclick="closeMobileMenu()" class="mobile-donate-btn">
+        <i class="fa-solid fa-heart"></i> Donate Now
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+<main id="main-content">
+<section id="hero">
+  <div class="hero-bg" id="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <p class="hero-telugu">మన రైతన్న ఫౌండేషన్</p>
+    <h1 class="hero-title">Mana <span>Raithanna</span><br>Foundation</h1>
+    <p class="hero-tagline">Empowering Farmers. Nurturing Nature. Building Communities.</p>
+    <div class="hero-ctas">
+      <a href="#programs" class="btn btn-saffron">
+        <i class="fa-solid fa-seedling"></i> Our Programs
+      </a>
+      <a href="#membership" class="btn btn-outline-white">
+        <i class="fa-solid fa-users"></i> Join Us
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="mouse"><div class="wheel"></div></div>
+    <span>Scroll</span>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="stat-icon"><i class="fa-solid fa-tractor"></i></div>
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Farmers Helped</div>
+    </div>
+    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="stat-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+      <div class="stat-num">20+</div>
+      <div class="stat-label">Villages Reached</div>
+    </div>
+    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="stat-icon"><i class="fa-solid fa-tree"></i></div>
+      <div class="stat-num">1000+</div>
+      <div class="stat-label">Saplings Planted</div>
+    </div>
+    <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="stat-icon"><i class="fa-solid fa-calendar-check"></i></div>
+      <div class="stat-num">25+</div>
+      <div class="stat-label">Years of Service</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Text Column -->
+      <div class="about-text" data-aos="fade-right">
+        <div class="section-tag"><i class="fa-solid fa-info-circle"></i> &nbsp;About Us</div>
+        <h2 class="section-title">Rooted in the Soil,<br>Rising for the People</h2>
+        <div class="section-divider"></div>
+
+        <div class="about-meta">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Registered under <strong>AP Societies Registration Act 35 of 2001</strong> — Prakasam District, Andhra Pradesh</span>
+        </div>
+
+        <p class="about-desc">
+          Mana Raithanna Foundation is a non-profit, non-commercial organisation headquartered in Edlurupadu Village, Zarugumalli Mandal. Founded on the belief that sustainable rural development begins at the grassroots, we work alongside farmers, women, youth and communities to build a self-reliant Andhra Pradesh.
+        </p>
+        <p class="about-desc" style="margin-top:-16px;">
+          From natural farming advocacy to women's empowerment, from sapling drives to disaster relief — our work spans the full spectrum of rural welfare, guided always by compassion, integrity, and respect for nature.
+        </p>
+
+        <div class="value-pillars">
+          <div class="pillar" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pillar-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <h4>Empowerment</h4>
+          </div>
+          <div class="pillar" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pillar-icon"><i class="fa-solid fa-recycle"></i></div>
+            <h4>Sustainability</h4>
+          </div>
+          <div class="pillar" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pillar-icon"><i class="fa-solid fa-people-group"></i></div>
+            <h4>Community</h4>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Our Mission &amp; Vision</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>Our mission is to foster holistic rural development by supporting farmers with sustainable agricultural practices, empowering women through skill-based training, providing quality education resources to children, and building community resilience through cultural preservation and social welfare initiatives.</p>
+            <p style="margin-top:10px;">We envision a prosperous Andhra Pradesh where every farmer thrives, every child learns, every woman leads, and every community stands united — in harmony with nature.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Column -->
+      <div class="about-image-wrap" data-aos="fade-left">
+        <span class="about-photo-label"><i class="fa-solid fa-camera"></i> Field Work</span>
+        <img
+          src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80"
+          alt="Farmers working in crop fields in India"
+          loading="lazy"
+        />
+        <div class="about-badge">
+          <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+          <div class="badge-text">
+            <strong>Est. 2001</strong>
+            <span>25+ Years Serving AP</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PROGRAMS
+========================================================= -->
+<section id="programs">
+  <div class="container">
+    <div class="programs-header">
+      <div class="section-tag"><i class="fa-solid fa-seedling"></i> &nbsp;Our Work</div>
+      <h2 class="section-title">Programs &amp; Initiatives</h2>
+      <div class="section-divider center"></div>
+      <p class="section-subtitle">Comprehensive programs designed to uplift every segment of rural society — from field to family.</p>
+    </div>
+
+    <!-- Agriculture & Environment -->
+    <div class="programs-section" data-aos="fade-up">
+      <div class="programs-section-label agri-label">
+        <div class="label-icon"><i class="fa-solid fa-tractor"></i></div>
+        <div>
+          <h3>Agriculture &amp; Environment</h3>
+          <span>Sustainable farming &amp; ecological restoration</span>
+        </div>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card agri-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <h4>Technical Farmer Support</h4>
+          <p>Providing farmers with technical guidance, best practices, and problem-solving support to improve crop yields and reduce losses.</p>
+        </div>
+        <div class="program-card agri-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h4>Organic Farming Training</h4>
+          <p>Hands-on training in chemical-free, organic methods including soil enrichment techniques, composting and biological pest control.</p>
+        </div>
+        <div class="program-card agri-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="card-icon"><i class="fa-solid fa-globe"></i></div>
+          <h4>Global Best Practices</h4>
+          <p>Bringing internationally proven agricultural innovations and techniques to Andhra Pradesh's farming communities.</p>
+        </div>
+        <div class="program-card agri-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon"><i class="fa-solid fa-tag"></i></div>
+          <h4>Subsidised Equipment</h4>
+          <p>Facilitating access to quality agricultural tools and machinery at subsidised rates so every farmer can modernise affordably.</p>
+        </div>
+        <div class="program-card agri-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="card-icon"><i class="fa-solid fa-cow"></i></div>
+          <h4>Natural Cow-Based Farming</h4>
+          <p>Promoting Panchagavya and Jeevamruta — traditional cow-based biostimulants that revitalise soil health naturally.</p>
+        </div>
+        <div class="program-card agri-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon"><i class="fa-solid fa-tree"></i></div>
+          <h4>Sapling Distribution &amp; Eco Living</h4>
+          <p>Sapling drives in villages, plastic-free living campaigns, and distribution of cloth and jute bags to reduce environmental harm.</p>
+        </div>
+        <div class="program-card agri-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="card-icon"><i class="fa-solid fa-paw"></i></div>
+          <h4>Animal Welfare Stations</h4>
+          <p>Setting up water troughs and food stations for stray animals along roadsides, ensuring their welfare year-round.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="programs-sep"></div>
+
+    <!-- Empowerment & Education -->
+    <div class="programs-section" data-aos="fade-up">
+      <div class="programs-section-label empwr-label">
+        <div class="label-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div>
+          <h3>Empowerment &amp; Education</h3>
+          <span>Skills, learning &amp; opportunity for women and youth</span>
+        </div>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card empwr-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="card-icon"><i class="fa-solid fa-scissors"></i></div>
+          <h4>Women's Cottage Industry</h4>
+          <p>Training women in tailoring, handicrafts, and cottage industry skills to generate sustainable income and self-reliance.</p>
+        </div>
+        <div class="program-card empwr-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h4>Free Youth Technical Training</h4>
+          <p>Free technical and vocational training for youth alongside resume writing and interview preparation to boost employability.</p>
+        </div>
+        <div class="program-card empwr-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="card-icon"><i class="fa-solid fa-book"></i></div>
+          <h4>School Supplies Distribution</h4>
+          <p>Providing books, stationery, uniforms, and clothes to students from economically weaker backgrounds at the start of every academic year.</p>
+        </div>
+        <div class="program-card empwr-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon"><i class="fa-solid fa-school"></i></div>
+          <h4>School Attendance Campaigns</h4>
+          <p>Door-to-door awareness drives to encourage regular school attendance, especially for girls and first-generation learners.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="programs-sep"></div>
+
+    <!-- Social Welfare & Community -->
+    <div class="programs-section" data-aos="fade-up">
+      <div class="programs-section-label social-label">
+        <div class="label-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
+        <div>
+          <h3>Social Welfare &amp; Community</h3>
+          <span>Dignity, relief &amp; cultural preservation for all</span>
+        </div>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card social-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="card-icon"><i class="fa-solid fa-child"></i></div>
+          <h4>Orphan &amp; Elder Support</h4>
+          <p>Regular support and assistance for orphaned children and elderly individuals who lack family care or resources.</p>
+        </div>
+        <div class="program-card social-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon"><i class="fa-solid fa-glass-water"></i></div>
+          <h4>Seasonal Aid Drives</h4>
+          <p>Buttermilk distribution in summer, blanket distribution in winter, and umbrella drives during monsoon for those in need.</p>
+        </div>
+        <div class="program-card social-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="card-icon"><i class="fa-solid fa-house-flood-water"></i></div>
+          <h4>Disaster Relief</h4>
+          <p>Rapid response support during floods, cyclones, earthquakes and other natural calamities including food, clothing and shelter assistance.</p>
+        </div>
+        <div class="program-card social-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
+          <h4>Village Mini-Libraries</h4>
+          <p>Establishing small reading rooms and libraries in villages to promote a culture of reading and lifelong learning.</p>
+        </div>
+        <div class="program-card social-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="card-icon"><i class="fa-solid fa-masks-theater"></i></div>
+          <h4>Cultural Preservation</h4>
+          <p>Organising meetings, events and festivals to document, celebrate and preserve the rich cultural heritage of Andhra Pradesh's rural communities.</p>
+        </div>
+        <div class="program-card social-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon"><i class="fa-solid fa-dove"></i></div>
+          <h4>Final Rites Assistance</h4>
+          <p>Providing dignified funeral assistance to families who cannot afford proper last rites for their deceased loved ones.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     IMPACT NUMBERS
+========================================================= -->
+<section id="impact">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="impact-header" data-aos="fade-up">
+      <div class="section-tag">Our Impact</div>
+      <h2 class="section-title">Numbers That Tell Our Story</h2>
+      <div class="section-divider center" style="background:linear-gradient(90deg,var(--golden),var(--saffron));"></div>
+      <p class="section-subtitle">Every number represents a life touched, a community strengthened, and a future brightened.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-item" data-aos="zoom-in" data-aos-delay="50">
+        <div class="impact-icon"><i class="fa-solid fa-tractor"></i></div>
+        <div class="impact-num" data-target="500" data-suffix="+">0</div>
+        <div class="impact-label">Farmers Reached</div>
+      </div>
+      <div class="impact-item" data-aos="zoom-in" data-aos-delay="100">
+        <div class="impact-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <div class="impact-num" data-target="20" data-suffix="+">0</div>
+        <div class="impact-label">Villages Served</div>
+      </div>
+      <div class="impact-item" data-aos="zoom-in" data-aos-delay="150">
+        <div class="impact-icon"><i class="fa-solid fa-tree"></i></div>
+        <div class="impact-num" data-target="1000" data-suffix="+">0</div>
+        <div class="impact-label">Saplings Planted</div>
+      </div>
+      <div class="impact-item" data-aos="zoom-in" data-aos-delay="200">
+        <div class="impact-icon"><i class="fa-solid fa-people-group"></i></div>
+        <div class="impact-num" data-target="5000" data-suffix="+">0</div>
+        <div class="impact-label">People Served</div>
+      </div>
+      <div class="impact-item" data-aos="zoom-in" data-aos-delay="250">
+        <div class="impact-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <div class="impact-num" data-target="25" data-suffix="+">0</div>
+        <div class="impact-label">Years of Service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TEAM
+========================================================= -->
+<section id="team">
+  <div class="container">
+    <div class="team-header" data-aos="fade-up">
+      <div class="section-tag"><i class="fa-solid fa-users"></i> &nbsp;Leadership</div>
+      <h2 class="section-title">Executive Committee</h2>
+      <div class="section-divider center"></div>
+      <p class="section-subtitle" style="margin:0 auto;">Dedicated leaders from the heart of Andhra Pradesh's farming communities.</p>
+    </div>
+    <div class="team-grid">
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="avatar">BK</div>
+        <span class="role-badge badge-president">President</span>
+        <div class="team-name">Basam Koteswara Rao</div>
+        <div class="team-occupation"><i class="fa-solid fa-seedling" style="color:var(--green);margin-right:4px;"></i>Natural Farming Advocate</div>
+      </div>
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="avatar">PG</div>
+        <span class="role-badge badge-vp">Vice President</span>
+        <div class="team-name">Ponnaganti Gopi</div>
+        <div class="team-occupation"><i class="fa-solid fa-hands-holding-heart" style="color:var(--saffron);margin-right:4px;"></i>Social Worker</div>
+      </div>
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="avatar">PM</div>
+        <span class="role-badge badge-secretary">Secretary</span>
+        <div class="team-name">Ponnaganti Manichandra</div>
+        <div class="team-occupation"><i class="fa-solid fa-hands-holding-heart" style="color:var(--saffron);margin-right:4px;"></i>Social Worker</div>
+      </div>
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="avatar">PS</div>
+        <span class="role-badge badge-joint">Joint Secretary</span>
+        <div class="team-name">Ponnaganti Suresh</div>
+        <div class="team-occupation"><i class="fa-solid fa-hands-holding-heart" style="color:var(--saffron);margin-right:4px;"></i>Social Worker</div>
+      </div>
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="avatar">MR</div>
+        <span class="role-badge badge-treasurer">Treasurer</span>
+        <div class="team-name">Marripudi Ruchitha</div>
+        <div class="team-occupation"><i class="fa-solid fa-hands-holding-heart" style="color:var(--saffron);margin-right:4px;"></i>Social Worker</div>
+      </div>
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="avatar">MC</div>
+        <span class="role-badge badge-exec">Executive Member</span>
+        <div class="team-name">Marripudi Chinnammay</div>
+        <div class="team-occupation"><i class="fa-solid fa-tractor" style="color:var(--green);margin-right:4px;"></i>Agriculture Specialist</div>
+      </div>
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="350">
+        <div class="avatar">YB</div>
+        <span class="role-badge badge-exec">Executive Member</span>
+        <div class="team-name">Yerra Bala Brahmaiah</div>
+        <div class="team-occupation"><i class="fa-solid fa-tractor" style="color:var(--green);margin-right:4px;"></i>Agriculture Specialist</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     MEMBERSHIP
+========================================================= -->
+<section id="membership">
+  <div class="container">
+    <div class="membership-grid">
+
+      <!-- Info -->
+      <div class="membership-info" data-aos="fade-right">
+        <div class="section-tag"><i class="fa-solid fa-id-card"></i> &nbsp;Membership</div>
+        <h2 class="section-title">Join Our<br>Foundation</h2>
+        <div class="section-divider"></div>
+        <p class="about-desc">
+          Become part of a growing movement for sustainable rural development. Open to all citizens who share our values of empowerment, sustainability and community service.
+        </p>
+
+        <div class="info-blocks">
+          <div class="info-block">
+            <div class="ib-icon"><i class="fa-solid fa-user-check"></i></div>
+            <div>
+              <h4>Eligibility</h4>
+              <p>Age 21 years and above. Open to any class, category, caste or religion.</p>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="ib-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+            <div>
+              <h4>Membership Fee</h4>
+              <p>One-time admission fee: <strong>₹100</strong> &nbsp;|&nbsp; Annual renewal: <strong>₹200</strong></p>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="ib-icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <div>
+              <h4>Annual General Body Meeting</h4>
+              <p>Held every <strong>April</strong> — all members are welcome and encouraged to attend.</p>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="ib-icon"><i class="fa-solid fa-rotate"></i></div>
+            <div>
+              <h4>Elections</h4>
+              <p>Executive Committee elections are conducted democratically every <strong>3 years</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="integrity-note">
+          <i class="fa-solid fa-shield-halved"></i>
+          <p>All membership funds are managed with complete financial transparency and used exclusively for the Foundation's non-profit, non-commercial welfare activities.</p>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="membership-form-card" data-aos="fade-left">
+        <div class="form-title">Join Today</div>
+        <div class="form-subtitle">Fill in your details and we'll be in touch within 48 hours.</div>
+        <form onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Full Name (పూర్తి పేరు) *</label>
+              <input type="text" id="f-name" placeholder="మీ పూర్తి పేరు" required />
+            </div>
+            <div class="form-group">
+              <label for="f-phone">Phone (ఫోన్ నంబర్) *</label>
+              <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-village">Village / Mandal (గ్రామం) *</label>
+              <input type="text" id="f-village" placeholder="గ్రామం / మండలం" required />
+            </div>
+            <div class="form-group">
+              <label for="f-district">District (జిల్లా) *</label>
+              <select id="f-district" required>
+                <option value="">Select District...</option>
+                <option selected>Prakasam</option>
+                <option>Nellore</option>
+                <option>Guntur</option>
+                <option>Krishna</option>
+                <option>Kurnool</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-land">Land Holding (భూమి ఎకరాలు)</label>
+              <select id="f-land">
+                <option value="">Select acres...</option>
+                <option>Less than 1 acre (1 ఎకరా కంటే తక్కువ)</option>
+                <option>1 – 2.5 acres</option>
+                <option>2.5 – 5 acres</option>
+                <option>5 – 10 acres</option>
+                <option>More than 10 acres</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-crop">Main Crop (ప్రధాన పంట)</label>
+              <select id="f-crop">
+                <option value="">Select crop...</option>
+                <option>Paddy (వరి)</option>
+                <option>Cotton (పత్తి)</option>
+                <option>Groundnut (వేరుశనగ)</option>
+                <option>Chilli (మిర్చి)</option>
+                <option>Sugarcane (చెరకు)</option>
+                <option>Vegetables (కూరగాయలు)</option>
+                <option>Mixed Farming (మిశ్రమ వ్యవసాయం)</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-farming-type">Farming Method (వ్యవసాయ పద్ధతి)</label>
+              <select id="f-farming-type">
+                <option value="">Select method...</option>
+                <option>Traditional (సంప్రదాయ)</option>
+                <option>Natural / Organic (సేంద్రియ)</option>
+                <option>Mixed (మిశ్రమ)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-water">Water Source (నీటి వనరు)</label>
+              <select id="f-water">
+                <option value="">Select source...</option>
+                <option>Canal (కాలువ)</option>
+                <option>Borewell (బోర్ వెల్)</option>
+                <option>Tank / Pond (చెరువు)</option>
+                <option>Rainfed (వర్షాధారం)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-interest">Join As (సభ్యత్వ రకం)</label>
+            <select id="f-interest" required>
+              <option value="">Select membership type...</option>
+              <option>Active Farmer Member (రైతు సభ్యుడు)</option>
+              <option>Women SHG Member (మహిళా సభ్యురాలు)</option>
+              <option>Youth Volunteer (యువ స్వయంసేవకుడు)</option>
+              <option>General Well-wisher (సానుభూతి సభ్యుడు)</option>
+            </select>
+          </div>
+          <button type="submit" class="form-submit">
+            <i class="fa-solid fa-paper-plane"></i>&nbsp; Submit Application (దరఖాస్తు పంపండి)
+          </button>
+        </form>
+        <div id="form-success" style="display:none;margin-top:20px;padding:16px;background:rgba(45,80,22,0.08);border:1px solid rgba(45,80,22,0.25);border-radius:8px;font-size:0.88rem;color:var(--green);text-align:center;">
+          <i class="fa-solid fa-circle-check"></i>&nbsp; <strong>Thank you!</strong> Your application has been received. We'll contact you within 48 hours.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bank Transfer Details -->
+    <div class="bank-card" data-aos="fade-up">
+      <div class="bank-card-icon"><i class="fa-solid fa-building-columns"></i></div>
+      <div class="bank-card-body">
+        <h3><i class="fa-solid fa-indian-rupee-sign"></i> Donate via Bank Transfer</h3>
+        <div class="bank-details-grid">
+          <div class="bank-detail-row">
+            <div class="bd-label">Account Name</div>
+            <div class="bd-value">MANA RAITHANNA FOUNDATION</div>
+          </div>
+          <div class="bank-detail-row">
+            <div class="bd-label">Account Number</div>
+            <div class="bd-value">50200118187020</div>
+          </div>
+          <div class="bank-detail-row">
+            <div class="bd-label">Bank</div>
+            <div class="bd-value">HDFC Bank</div>
+          </div>
+          <div class="bank-detail-row">
+            <div class="bd-label">Branch</div>
+            <div class="bd-value">Kandukur</div>
+          </div>
+          <div class="bank-detail-row">
+            <div class="bd-label">IFSC Code</div>
+            <div class="bd-value">HDFC0003119</div>
+          </div>
+        </div>
+      </div>
+      <div class="bank-cta">
+        <a href="https://wa.me/919493189629?text=Hi%2C%20I%20would%20like%20to%20donate%20to%20Mana%20Raithanna%20Foundation" target="_blank" rel="noopener" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Confirm on WhatsApp
+        </a>
+        <small>Send payment proof after transfer</small>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+<section id="gallery">
+  <div class="container">
+    <div class="gallery-header" data-aos="fade-up">
+      <div class="section-tag"><i class="fa-solid fa-images"></i> &nbsp;Gallery</div>
+      <h2 class="section-title">Our Work in Pictures</h2>
+      <div class="section-divider center"></div>
+      <p class="section-subtitle" style="margin:0 auto;">A glimpse into the lives, landscapes and communities we serve across Andhra Pradesh.</p>
+    </div>
+  </div>
+
+  <div class="gallery-strip" data-aos="fade-up" data-aos-delay="100">
+    <div class="gallery-item" onclick="openLightbox('images/1.jpeg')">
+      <img src="images/1.jpeg" alt="Foundation — Edlurupadu" loading="lazy" />
+      <div class="gallery-caption">Foundation — Edlurupadu</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/2.jpeg')">
+      <img src="images/2.jpeg" alt="Road Development Work" loading="lazy" />
+      <div class="gallery-caption">Road Development Work</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/3.jpeg')">
+      <img src="images/3.jpeg" alt="Sapling Plantation Drive" loading="lazy" />
+      <div class="gallery-caption">Sapling Plantation Drive</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/4.jpeg')">
+      <img src="images/4.jpeg" alt="Roadside Green Campaign" loading="lazy" />
+      <div class="gallery-caption">Roadside Green Campaign</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/6.jpeg')">
+      <img src="images/6.jpeg" alt="Nurturing the Saplings" loading="lazy" />
+      <div class="gallery-caption">Nurturing the Saplings</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/7.jpeg')">
+      <img src="images/7.jpeg" alt="Community Volunteers" loading="lazy" />
+      <div class="gallery-caption">Community Volunteers</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('images/8.jpeg')">
+      <img src="images/8.jpeg" alt="Large-scale Plantation" loading="lazy" />
+      <div class="gallery-caption">Large-scale Plantation</div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox(event)">
+    <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Gallery image" />
+  </div>
+</section>
+
+<!-- =========================================================
+     NEWS TICKER
+========================================================= -->
+<div id="news-ticker">
+  <div class="container">
+    <div class="ticker-inner">
+      <span class="ticker-label"><i class="fa-solid fa-bell"></i>&nbsp; Latest</span>
+      <div class="ticker-track">
+        <div class="ticker-content">
+          <span><i class="fa-solid fa-circle-dot"></i> Summer buttermilk distribution successfully completed across 8 villages</span>
+          <span><i class="fa-solid fa-circle-dot"></i> Sapling drive completed in 5 villages — 200 saplings planted this season</span>
+          <span><i class="fa-solid fa-circle-dot"></i> Organic farming training conducted with senior government agriculture officials</span>
+          <span><i class="fa-solid fa-circle-dot"></i> Winter blanket distribution programme currently underway</span>
+          <span><i class="fa-solid fa-circle-dot"></i> Free technical training batch for 30 youth completed successfully</span>
+          <span><i class="fa-solid fa-circle-dot"></i> Mini-library inaugurated at Edlurupadu Village community hall</span>
+          <span><i class="fa-solid fa-circle-dot"></i> School supplies distributed to 120 students ahead of academic year</span>
+          <!-- Duplicate for seamless loop -->
+          <span><i class="fa-solid fa-circle-dot"></i> Summer buttermilk distribution successfully completed across 8 villages</span>
+          <span><i class="fa-solid fa-circle-dot"></i> Sapling drive completed in 5 villages — 200 saplings planted this season</span>
+          <span><i class="fa-solid fa-circle-dot"></i> Organic farming training conducted with senior government agriculture officials</span>
+          <span><i class="fa-solid fa-circle-dot"></i> Winter blanket distribution programme currently underway</span>
+          <span><i class="fa-solid fa-circle-dot"></i> Free technical training batch for 30 youth completed successfully</span>
+          <span><i class="fa-solid fa-circle-dot"></i> Mini-library inaugurated at Edlurupadu Village community hall</span>
+          <span><i class="fa-solid fa-circle-dot"></i> School supplies distributed to 120 students ahead of academic year</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================
+     CONTACT / FOOTER
+========================================================= -->
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand" data-aos="fade-up">
+        <div class="f-logo">
+          <img src="images/logo.jpeg" alt="MRF Logo" style="width:48px;height:48px;border-radius:10px;object-fit:cover;flex-shrink:0;" />
+          <div>
+            <div class="f-logo-name">Mana Raithanna Foundation</div>
+            <div class="f-logo-sub">Empowering Rural Andhra Pradesh</div>
+          </div>
+        </div>
+        <p>A non-profit organisation rooted in the soil of Zarugumalli Mandal, Prakasam District — working to uplift farmers, women, youth and communities since 2001.</p>
+        <div class="social-row">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://wa.me/919493189629" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#programs">Our Programs</a></li>
+          <li><a href="#impact">Our Impact</a></li>
+          <li><a href="#team">Executive Committee</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-contact" data-aos="fade-up" data-aos-delay="200">
+        <h4>Get in Touch</h4>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>D.No. 1-93, Beside Sriramalayam,<br>Edlurupadu Village, Zarugumalli Mandal,<br>Prakasam District, Andhra Pradesh — 523105</p>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <p><a href="mailto:manaraithannafoundation@gmail.com">manaraithannafoundation@gmail.com</a></p>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <p><a href="tel:+919493189629">+91 94931 89629</a></p>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+          <p><a href="https://wa.me/919493189629" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-clock"></i>
+          <p>Mon – Sat: 9:00 AM – 6:00 PM</p>
+        </div>
+
+        <div class="map-embed" style="height:180px;display:block;padding:0;background:none;border:none;">
+          <iframe
+            src="https://maps.google.com/maps?q=15.2225602,79.8322864&z=16&output=embed"
+            width="100%" height="180" style="border:0;border-radius:8px;display:block;"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 <strong>Mana Raithanna Foundation</strong>. All rights reserved.</p>
+      <p style="font-size:0.78rem;color:rgba(255,255,255,0.45);display:flex;align-items:center;gap:6px;">
+        <i class="fa-solid fa-eye" style="color:var(--golden);font-size:0.7rem;"></i>
+        <span id="visit-count">—</span> site visits
+      </p>
+      <p class="footer-reg">Registered under AP Societies Registration Act 35 of 2001 &nbsp;|&nbsp; Non-profit &amp; Non-commercial</p>
+    </div>
+  </div>
+</footer>
+</main>
+
+<!-- Back to Top -->
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- =========================================================
+     SCRIPTS
+========================================================= -->
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- Visitor Counter -->
+<script>
+(function() {
+  fetch('https://api.counterapi.dev/v1/manaraithanna-foundation/visits/up')
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      var el = document.getElementById('visit-count');
+      if (el && d && d.count) el.textContent = Number(d.count).toLocaleString('en-IN');
+    })
+    .catch(function(){});
+})();
+</script>
+
+<script>
+/* -------------------------------------------------------
+   PAGE LOADER
+------------------------------------------------------- */
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    document.getElementById('page-loader').classList.add('hidden');
+  }, 1900);
+});
+
+/* -------------------------------------------------------
+   HERO BG (lazy reveal)
+------------------------------------------------------- */
+(function () {
+  var bg = document.getElementById('hero-bg');
+  var img = new Image();
+  img.onload = function () {
+    bg.style.backgroundImage = "url('" + img.src + "')";
+    bg.classList.add('loaded');
+  };
+  img.src = 'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=1920&q=80';
+  bg.style.opacity = 1;
+})();
+
+/* -------------------------------------------------------
+   NAVBAR
+------------------------------------------------------- */
+var navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+/* -------------------------------------------------------
+   HAMBURGER MENU
+------------------------------------------------------- */
+var hamburger = document.getElementById('hamburger');
+var mobileMenu = document.getElementById('mobile-menu');
+
+hamburger.addEventListener('click', function () {
+  var isOpen = hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+
+function closeMobileMenu() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+}
+
+/* -------------------------------------------------------
+   ACCORDION
+------------------------------------------------------- */
+function toggleAccordion(btn) {
+  btn.classList.toggle('open');
+  var body = btn.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+/* -------------------------------------------------------
+   COUNTER ANIMATION
+------------------------------------------------------- */
+function animateCounters() {
+  var counters = document.querySelectorAll('.impact-num[data-target]');
+  counters.forEach(function (el) {
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = 1800;
+    var startTime = null;
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+      var current = Math.floor(eased * target);
+      el.textContent = current.toLocaleString('en-IN') + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = target.toLocaleString('en-IN') + suffix;
+      }
+    }
+    requestAnimationFrame(step);
+  });
+}
+
+/* Trigger counters when impact section enters viewport */
+var countersDone = false;
+var impactSection = document.getElementById('impact');
+var observer = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting && !countersDone) {
+      countersDone = true;
+      animateCounters();
+    }
+  });
+}, { threshold: 0.3 });
+observer.observe(impactSection);
+
+/* -------------------------------------------------------
+   LIGHTBOX
+------------------------------------------------------- */
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(e) {
+  if (!e || e.target !== document.getElementById('lightbox-img')) {
+    document.getElementById('lightbox').classList.remove('open');
+    document.getElementById('lightbox-img').src = '';
+    document.body.style.overflow = '';
+  }
+}
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+/* -------------------------------------------------------
+   BACK TO TOP
+------------------------------------------------------- */
+var backTop = document.getElementById('back-top');
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 400) {
+    backTop.classList.add('visible');
+  } else {
+    backTop.classList.remove('visible');
+  }
+});
+
+/* -------------------------------------------------------
+   MEMBERSHIP FORM
+------------------------------------------------------- */
+function handleFormSubmit(e) {
+  e.preventDefault();
+  document.getElementById('form-success').style.display = 'block';
+  e.target.reset();
+  setTimeout(function () {
+    document.getElementById('form-success').style.display = 'none';
+  }, 6000);
+}
+
+/* -------------------------------------------------------
+   AOS INIT
+------------------------------------------------------- */
+AOS.init({
+  duration: 700,
+  once: true,
+  offset: 60,
+  easing: 'ease-out-cubic'
+});
+
+/* -------------------------------------------------------
+   SMOOTH ACTIVE NAV HIGHLIGHT
+------------------------------------------------------- */
+(function () {
+  var sections = document.querySelectorAll('section[id], footer[id]');
+  var navLinks = document.querySelectorAll('.nav-links a:not(.nav-donate)');
+
+  window.addEventListener('scroll', function () {
+    var scrollPos = window.scrollY + 120;
+    sections.forEach(function (section) {
+      if (
+        section.offsetTop <= scrollPos &&
+        section.offsetTop + section.offsetHeight > scrollPos
+      ) {
+        navLinks.forEach(function (link) {
+          link.style.fontWeight = '500';
+          link.style.color = '';
+        });
+        var active = document.querySelector('.nav-links a[href="#' + section.id + '"]');
+        if (active) {
+          active.style.fontWeight = '700';
+        }
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

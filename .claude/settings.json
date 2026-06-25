@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(netlify --version)",
+      "Bash(netlify status *)",
+      "Bash(netlify link *)",
+      "Bash(netlify sites:list)",
+      "Bash(netlify deploy *)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\rloll\\sci-research-platform"
+    ]
+  }
+}

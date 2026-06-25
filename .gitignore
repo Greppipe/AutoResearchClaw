@@ -1,0 +1,113 @@
+# ─── Secrets & Environment ──────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+secrets/
+credentials/
+private/
+
+# ─── Pipeline Outputs (never commit generated docs) ─────────────────────────
+outputs/
+*.docx
+*.pdf
+*.bib
+!infrastructure/**/*.pdf
+!docs/**/*.pdf
+
+# ─── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+htmlcov/
+*.log
+pip-log.txt
+
+# ─── Virtual environments ────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.virtualenv/
+
+# ─── Node / Frontend ─────────────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+.nuxt/
+dist/
+.cache/
+*.tsbuildinfo
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# ─── IDEs & Editors ──────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── ML / Model files (large binaries) ──────────────────────────────────────
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+sentence_transformers_cache/
+huggingface_cache/
+.cache/huggingface/
+.cache/torch/
+
+# ─── Docker ──────────────────────────────────────────────────────────────────
+.docker/
+
+# ─── Alembic (generated migration files ok, but not local DB) ───────────────
+*.db
+*.sqlite3
+
+# ─── Coverage / Test artifacts ───────────────────────────────────────────────
+.nyc_output/
+coverage/
+test-results/
+junit.xml
+
+# ─── Uploads & temp files ────────────────────────────────────────────────────
+uploads/
+tmp/
+temp/
+*.tmp
+
+# ─── OS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
